@@ -1,8 +1,26 @@
 #root {
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  text-align: left;
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.page-title {
+  font-size: 1.8rem;
+  color: #1a4a9e;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.page-subtitle {
+  color: #565656;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
 }
 
 .logo {
@@ -34,7 +52,36 @@
 }
 
 .card {
-  padding: 2em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styling */
+.form-container {
+  background-color: white;
+  border-radius: 4px;
+  padding: 1.5rem;
+}
+
+.form-label {
+  color: #333;
+  font-weight: 500;
+}
+
+.form-input {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.form-input:focus {
+  border-color: #1a4a9e;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(26, 74, 158, 0.2);
 }
 
 .read-the-docs {

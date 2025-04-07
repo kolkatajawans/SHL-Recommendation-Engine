@@ -5,7 +5,7 @@ export interface Assessment {
     job_levels: string[];
     languages: string[];
     duration: number;
-    test_type: string;
+    test_types: string[];
     remote_testing: boolean;
     adaptive_irt: boolean;
   }

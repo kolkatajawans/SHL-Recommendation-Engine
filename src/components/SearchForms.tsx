@@ -17,7 +17,7 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-6 bg-white p-6 rounded-lg shadow-sm border border-gray-200">
       <div className="space-y-2">
         <label htmlFor="query" className="block text-sm font-medium text-gray-700">
           Job Description or Query
@@ -27,7 +27,7 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
             id="query"
             name="query"
             rows={4}
-            className="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md p-2"
+            className="shadow-sm focus:ring-[#1a4a9e] focus:border-[#1a4a9e] block w-full sm:text-sm border-gray-300 rounded-md p-3"
             placeholder="I am hiring for Java developers who can also collaborate effectively with my business teams. Looking for an assessment(s) that can be completed in 40 minutes."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
@@ -45,7 +45,7 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
             id="isUrl"
             name="isUrl"
             type="checkbox"
-            className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+            className="h-4 w-4 text-[#1a4a9e] focus:ring-[#1a4a9e] border-gray-300 rounded"
             checked={isUrl}
             onChange={(e) => setIsUrl(e.target.checked)}
           />
@@ -61,7 +61,7 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
           <select
             id="maxResults"
             name="maxResults"
-            className="block w-20 text-sm border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            className="block w-20 text-sm border-gray-300 rounded-md shadow-sm focus:ring-[#1a4a9e] focus:border-[#1a4a9e]"
             value={maxResults}
             onChange={(e) => setMaxResults(Number(e.target.value))}
           >
@@ -75,7 +75,7 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
       <div>
         <button
           type="submit"
-          className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#1a4a9e] hover:bg-[#2a6ad2] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1a4a9e]"
         >
           Find Assessments
         </button>
@@ -94,7 +94,7 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
               <button
                 key={idx}
                 type="button"
-                className="text-left text-xs bg-gray-100 hover:bg-gray-200 p-2 rounded truncate"
+                className="text-left text-xs bg-gray-50 hover:bg-gray-100 p-2 rounded border border-gray-200 truncate"
                 onClick={() => setQuery(sample)}
               >
                 {sample.length > 70 ? `${sample.substring(0, 70)}...` : sample}
