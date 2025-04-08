@@ -19,7 +19,6 @@ const App: React.FC = () => {
     setError(null);
     setSearchQuery(query);
     try {
-      console.log(import.meta.env.VITE_BACKEND_DOMAIN);
       
       const response = await fetch(`${import.meta.env.VITE_BACKEND_DOMAIN}/search?query=${encodeURIComponent(query)}&is_url=${isUrl}&max_results=${maxResults}`);
       
